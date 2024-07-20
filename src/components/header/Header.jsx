@@ -6,11 +6,13 @@ import Drawer from 'react-modern-drawer';
 import 'react-modern-drawer/dist/index.css'
 import { PiHamburgerFill } from "react-icons/pi";
 import background from '../../assets/background.jpeg'
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const screenSize = useWindowSize();
     const mobileView = screenSize <= 600;
+    const navigate = useNavigate();
 
     const handleClose = () => {
         setIsDrawerOpen(false);
@@ -31,9 +33,9 @@ const Header = () => {
                         <a href='#'><CiSearch /></a>
                     </div>
                     <div className={style.profile}>
-                        <span id={style.btn}>{0}</span>
-                        <span id={style.login}>Log in</span>
-                        <span id={style.btn}>Sign Up</span>
+                        <span onClick={() => navigate('/')} id={style.btn}>{0}</span>
+                        <span onClick={() => navigate('/login')} id={style.login}>Log in</span>
+                        <span onClick={() => navigate('/signup')} id={style.btn}>Sign Up</span>
                     </div>
                 </div>
             }
@@ -46,9 +48,9 @@ const Header = () => {
                         <a href='#'>Recipes</a>
                         <a href='#'>Hotline</a>
                         <a href='#'><CiSearch /></a>
-                        <span id={style.btn}>{0}</span>
-                        <span id={style.btn}>Log in</span>
-                        <span id={style.btn}>Sign Up</span>
+                        <span onClick={() => navigate('/')} id={style.btn}>{0}</span>
+                        <span onClick={() => navigate('/login')} id={style.btn}>Log in</span>
+                        <span onClick={() => navigate('/signup')} id={style.btn}>Sign Up</span>
                     </div>
                 </div>
             </Drawer>}
