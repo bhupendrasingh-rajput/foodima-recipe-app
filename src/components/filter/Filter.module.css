@@ -1,0 +1,134 @@
+.filter {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+header {
+    position: relative;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    column-gap: 0.5vw;
+    font-size: 4vh;
+    font-weight: 600;
+
+    p {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        column-gap: 1vw;
+    }
+
+    img {
+        object-fit: cover;
+        height: 4vh;
+    }
+}
+
+main {
+    display: grid;
+    row-gap: 1.5vh;
+    font-size: medium;
+
+    #bold {
+        font-weight: 500;
+    }
+
+    #clearfilter {
+        color: rgba(255, 0, 0, 0.808);
+        font-size: small;
+        cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+        accent-color: black;
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+
+    #add {
+        cursor: pointer;
+    }
+}
+
+.filterRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+select {
+    height: 5vh;
+    outline: none;
+    border-radius: 0.5rem;
+    padding-inline: 1vw;
+}
+
+option {
+    color: gray;
+    background-color: rgba(255, 228, 196, 0.331);
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    main {
+        row-gap: 1vh;
+        font-size: small;
+
+        #clearfilter {
+            font-size: smaller;
+        }
+
+        input[type="checkbox"] {
+            transform: scale(1);
+        }
+    }
+
+    select {
+        height: 4vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .filter {
+        width: 100%;
+        row-gap: 1vh;
+    }
+
+    header {
+        height: 6vh;
+        display: flex;
+        font-size: 3.5vh;
+        align-items: center;
+        justify-content: space-between;
+
+        button {
+            background-color: black;
+            border-radius: 1rem;
+            color: rgba(255, 255, 255, 0.758);
+            font-size: x-small;
+            padding: 0.5vh 2vw;
+            outline: none;
+            border: none;
+        }
+    }
+
+    main {
+        row-gap: 1vh;
+        font-size: 2vh;
+
+        #clearfilter {
+            font-size: 1.5vh;
+        }
+
+        input[type="checkbox"] {
+            transform: scale(1.1);
+        }
+    }
+
+    select {
+        height: 4vh;
+    }
+}

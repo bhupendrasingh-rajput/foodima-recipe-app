@@ -1,0 +1,135 @@
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+.sort_search_row {
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search {
+    height: 6vh;
+    width: 50%;
+    background-color: rgba(209, 209, 192, 0.311);
+    border-radius: 0.5rem;
+    padding-inline: 1vw;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    font-weight: 500;
+
+    input {
+        border: none;
+        outline: none;
+        height: 100%;
+        width: 100%;
+        background: transparent;
+    }
+}
+
+.sort {
+    height: 5vh;
+    padding-inline: 1vw;
+    background-color: black;
+    color: white;
+    outline: none;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: small;
+
+    p {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    select {
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        font-size: small;
+    }
+
+    option {
+        background-color: black;
+    }
+}
+
+.recipeContainer {
+    /* border: 2px solid red; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-between;
+    row-gap: 5vh;
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .sort {
+        height: 4vh;
+        font-size: smaller;
+    }
+
+    .recipeContainer {
+        row-gap: 4vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        row-gap: 2vh;
+    }
+
+    .container {
+        width: 100%;
+        row-gap: 1vh;
+    }
+
+    .sort_search_row {
+        height: 6vh;
+    }
+
+    .search {
+        height: 5vh;
+        width: 60%;
+        font-size: 1.5vh;
+        padding-inline: 2vw;
+
+        input::placeholder {
+            font-size: 2vh;
+        }
+    }
+
+    .sort {
+        height: 3.5vh;
+        font-size: 1.5vh;
+
+        select {
+            font-size: 1.5vh;
+        }
+    }
+
+    .recipeContainer {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
+    }
+}

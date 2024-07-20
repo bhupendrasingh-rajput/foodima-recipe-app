@@ -1,0 +1,91 @@
+.banner {
+    position: relative;
+    height: 50vh;
+    border-radius: 1.5rem;
+    background: #fbe1dd;
+    padding-inline: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: all ease 0.5s;
+
+    img {
+        height: 100%;
+    }
+}
+
+.banner:hover {
+    scale: 1.02;
+}
+
+.bannerinfo {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1vh;
+
+    span {
+        font-size: 5.5vh;
+        font-weight: 500;
+        padding-inline: 1vw;
+        padding: 0;
+    }
+
+    p {
+        font-size: medium;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .banner {
+        height: 40vh;
+    }
+
+    .bannerinfo {
+        width: 30%;
+
+        span {
+            font-size: 4.5vh;
+        }
+
+        p {
+            font-size: 2.5vh;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .banner {
+        position: relative;
+        height: 35vh;
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .bannerinfo {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.519);
+            border-radius: 1rem;
+
+            span {
+                font-size: 4vh;
+            }
+
+            p {
+                font-size: 2vh;
+            }
+        }
+    }
+}

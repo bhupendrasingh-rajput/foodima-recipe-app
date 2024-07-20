@@ -1,0 +1,99 @@
+.recipeBox {
+    position: relative;
+    cursor: pointer;
+    aspect-ratio: 4/3;
+    background-color: rgba(0, 0, 0, 0.046);
+    border-radius: 1rem;
+    transition: all ease 0.5s;
+    display: flex;
+    flex-direction: column;
+
+    img {
+        height: 60%;
+        border-radius: 1rem;
+        object-fit: cover;
+    }
+}
+
+.recipeBox:hover {
+    scale: 1.05;
+}
+
+.details {
+    height: 40%;
+    padding: 1vh 0.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    #name {
+        font-size: small;
+        font-weight: 500;
+    }
+
+    span {
+        font-size: smaller;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    #chef,
+    #rating {
+        font-size: smaller;
+        color: rgb(138, 133, 128);
+    }
+}
+
+#description {
+    font-size: x-small;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .recipeBox {
+        aspect-ratio: 3/4;
+    }
+
+    .details {
+        padding: 1vh 0.5vw;
+
+        #name {
+            font-size: 1.6vh;
+        }
+
+        span {
+            font-size: 1.5vh;
+        }
+
+        #description {
+            font-size: 1.3vh;
+        }
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .recipeBox {
+        width: 100%;
+        height: 30vh;
+    }
+
+    .details {
+        padding: 1vh 1vw;
+
+        #name {
+            font-size: 2.3vh;
+        }
+    }
+}
